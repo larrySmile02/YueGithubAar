@@ -37,9 +37,9 @@ dependencies {
 apply plugin: 'maven'
 ext {
     GITHUB_REPO_PATH = "/Users/liyue/Documents/myGitDemo/YueGithubAar"
-    PUBLISH_GROUP_ID = 'com.ky.video'
-    PUBLISH_ARTIFACT_ID = 'flutter_study'
-    PUBLISH_VERSION = '1.0.1'
+    PUBLISH_GROUP_ID = 'com.lee.video'
+    PUBLISH_ARTIFACT_ID = 'flutter_rd'
+    PUBLISH_VERSION = '1.0.0'
 }
 
 uploadArchives {
@@ -54,11 +54,3 @@ uploadArchives {
     }
 }
 
-// 源代码一起打包
-task androidSourcesJar(type: Jar) {
-    classifier = 'sources'
-    from android.sourceSets.main.java.sourceFiles
-}
-artifacts {
-    archives androidSourcesJar
-}
