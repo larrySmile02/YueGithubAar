@@ -1,2 +1,3 @@
+//include ':buildSrc'
 include ':app', ':lib_flutter_study'
 rootProject.name='YueGithubAar'

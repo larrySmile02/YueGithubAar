@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'lee.GelVersionPlugin'
 
 android {
     compileSdkVersion 29
