@@ -8,7 +8,8 @@ class GelConfigPlugin implements Plugin<Project>{
 
     @Override
     void apply(Project project) {
-        def configVersions = project.extensions.create("versionConfig",GelVersionConfig)
+        def versionConfig = project.extensions.create("versionConfig",GelVersionConfig)
+        project.extensions.add("versionConfig",versionConfig)
         project.task("configTest"){
             doLast {
                 println "config version = ${configVersions.glideVersion}"
