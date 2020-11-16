@@ -14,7 +14,6 @@ import javax.annotation.processing.Processor;
 import javax.annotation.processing.RoundEnvironment;
 import javax.lang.model.SourceVersion;
 import javax.lang.model.element.Element;
-import javax.lang.model.element.ElementKind;
 import javax.lang.model.element.TypeElement;
 import javax.tools.Diagnostic;
 
@@ -43,23 +42,6 @@ public class ServiceProcessor extends AbstractProcessor {
     @Override
     public boolean process(Set<? extends TypeElement> set, RoundEnvironment roundEnvironment) {
 
-//        for(Element element:roundEnvironment.getRootElements()){
-//            System.out.println("ServiceProcessor_elementName="+element.getSimpleName());
-//            for(Element enclosedElement : element.getEnclosedElements()){
-//                if(enclosedElement.getKind()== ElementKind.CLASS){
-//                    MicroService service = enclosedElement.getAnnotation(MicroService.class);
-//                    if(service !=null){
-//                        System.out.println("ServiceProcessor_service exist!");
-//                        return true;
-//                    }
-//                }else if(enclosedElement.getKind()== ElementKind.ANNOTATION_TYPE){
-//                    MicroService service = enclosedElement.getAnnotation(MicroService.class);
-//                    if(service !=null){
-//                        System.out.println("ServiceProcessor_service exist!!!!!");
-//                        return true;
-//                    }
-//                }
-//            }
 
             if (set != null && set.size() > 0) {
                 Iterator iterator = set.iterator();
@@ -76,7 +58,6 @@ public class ServiceProcessor extends AbstractProcessor {
                 return true;
             }
 
-//        }
 
         //注解处理过程是有序循环过程，process方法可能会被多次调用，一次循环中processor可能会被要求处理上次循环产生的注解
         // 返回true说明注解被声明了，接下来processor就不会再处理这些注解了
