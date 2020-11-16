@@ -37,12 +37,18 @@ public class ServiceProcessor extends AbstractProcessor {
     public boolean process(Set<? extends TypeElement> set, RoundEnvironment roundEnvironment) {
 
         for(Element element:roundEnvironment.getRootElements()){
-            System.out.print("ServiceProcessor_elementName="+element.getSimpleName());
+            System.out.println("ServiceProcessor_elementName="+element.getSimpleName());
             for(Element enclosedElement : element.getEnclosedElements()){
                 if(enclosedElement.getKind()== ElementKind.CLASS){
                     MicroService service = enclosedElement.getAnnotation(MicroService.class);
                     if(service !=null){
-                        System.out.print("ServiceProcessor_service exist!");
+                        System.out.println("ServiceProcessor_service exist!");
+                        return true;
+                    }
+                }else if(enclosedElement.getKind()== ElementKind.ANNOTATION_TYPE){
+                    MicroService service = enclosedElement.getAnnotation(MicroService.class);
+                    if(service !=null){
+                        System.out.println("ServiceProcessor_service exist!!!!!");
                         return true;
                     }
                 }
