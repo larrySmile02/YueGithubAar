@@ -1,3 +1,4 @@
+include ':annotation_service'
 include ':plugin_config'//include ':buildSrc'
 include ':app', ':lib_flutter_study'
 rootProject.name='YueGithubAar'
