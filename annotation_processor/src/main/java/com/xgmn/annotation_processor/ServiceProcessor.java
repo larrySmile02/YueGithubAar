@@ -43,6 +43,7 @@ public class ServiceProcessor extends AbstractProcessor {
                     MicroService service = enclosedElement.getAnnotation(MicroService.class);
                     if(service !=null){
                         System.out.print("ServiceProcessor_service exist!");
+                        return true;
                     }
                 }
             }
