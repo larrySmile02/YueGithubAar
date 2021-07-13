@@ -8,7 +8,7 @@ sourceCompatibility = "1.7"
 targetCompatibility = "1.7"
 
 ext {
-    GITHUB_REPO_PATH = "/Users/liyue/Documents/YueGithubAar"
+    GITHUB_REPO_PATH = "/Users/liyue/Documents/Third-lib/YueGithubAar"
     PUBLISH_GROUP_ID = 'cn.yao.annotation'
     PUBLISH_ARTIFACT_ID = 'service'
     PUBLISH_VERSION = '1.0.1'
