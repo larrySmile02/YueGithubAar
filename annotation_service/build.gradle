@@ -11,7 +11,7 @@ ext {
     GITHUB_REPO_PATH = "/Users/liyue/Documents/YueGithubAar"
     PUBLISH_GROUP_ID = 'cn.yao.annotation'
     PUBLISH_ARTIFACT_ID = 'service'
-    PUBLISH_VERSION = '1.0.0'
+    PUBLISH_VERSION = '1.0.1'
 }
 
 uploadArchives {
